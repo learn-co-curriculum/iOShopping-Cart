@@ -7,6 +7,8 @@
 //
 
 #import "FISAppDelegate.h"
+#import "FISItem.h"
+#import "FISCart.h"
 
 @implementation FISAppDelegate
 
@@ -16,6 +18,25 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    FISCart *cart = [[FISCart alloc] init];
+    FISItem *item1 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
+    FISItem *item2 = [[FISItem alloc] initWithName:@"diet coke" andPrice:@2];
+    FISItem *item3 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
+    FISItem *item4 = [[FISItem alloc] initWithName:@"DiGiorno" andPrice:@5];
+    FISItem *item5 = [[FISItem alloc] initWithName:@"eggs" andPrice:@3];
+    FISItem *item6 = [[FISItem alloc] initWithName:@"milk" andPrice:@4];
+    FISItem *item7 = [[FISItem alloc] initWithName:@"protein powder" andPrice:@10];
+    [cart addItem:item1];
+    [cart addItem:item2];
+    [cart addItem:item3];
+    [cart addItem:item4];
+    [cart addItem:item5];
+    [cart addItem:item6];
+    [cart addItem:item7];
+    
+    [cart itemsWithName:@"protein powder"];
+    
     return YES;
 }
 

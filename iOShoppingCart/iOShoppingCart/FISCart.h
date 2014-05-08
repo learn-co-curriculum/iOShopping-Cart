@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FISItem.h"
 
 @interface FISCart : NSObject
+
+@property (strong, nonatomic) NSMutableArray *items;
+
+-(NSNumber *)total;
+-(void)addItem:(FISItem *)newItem;
+-(NSNumber *)numOfItems;
+-(NSArray *)itemsSortedByName;
+-(NSArray *)itemsSortedByPrice;
+-(NSArray *)itemsWithName:(NSString *)name;
 
 @end

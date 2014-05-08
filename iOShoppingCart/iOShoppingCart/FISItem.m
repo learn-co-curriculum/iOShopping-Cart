@@ -10,4 +10,14 @@
 
 @implementation FISItem
 
+-(instancetype)initWithName:(NSString *)name andPrice:(NSNumber *)price
+{
+    self = [super init];
+    if (self) {
+        _name = name;
+        _price = price;
+    }
+    return self;
+}
+
 @end
