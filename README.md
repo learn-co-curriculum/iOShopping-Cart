@@ -25,5 +25,3 @@ Making a shopping cart.
   4. Make sure these all work!
 
   5. Extra Credit: override the `(NSString *)description` method to print out a nicely formatted cart. Remember to include the price for every item and the total at the bottom. Also! If you have more than one item that are the same (have the same name and price) then list a quantity...don't just list the same thing twice.
-
-###Tutorial
