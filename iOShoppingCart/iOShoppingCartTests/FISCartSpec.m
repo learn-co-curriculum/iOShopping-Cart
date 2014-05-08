@@ -53,9 +53,18 @@ describe(@"FISCart", ^{
     });
     
     it(@"can add an item to the cart",^{
-        FISItem *item8 = [[FISItem alloc] initWithName:@"cheez-its" andPrice:@4];
-        [cart addItem:item8];
-        expect([cart.items lastObject]).to.equal(item8);
+        FISItem *itemToAdd = [[FISItem alloc] initWithName:@"cheez-its" andPrice:@4];
+        [cart addItem:itemToAdd];
+        expect([cart.items lastObject]).to.equal(itemToAdd);
+    });
+    
+    describe(@"removeItem:", ^{
+        it(@"can remove an item from the cart",^{
+            FISItem *itemToRemove = [cart.items firstObject];
+            [cart removeItem:itemToRemove];
+            
+            expect([cart.items containsObject:itemToRemove]).to.beFalsy();
+        });
     });
     
     it(@"can return a total price for the cart",^{
@@ -82,16 +91,40 @@ describe(@"FISCart", ^{
         expect([cart itemsSortedByPrice]).to.equal(sortedItems);
     });
     
-    it(@"can return all items with a given name",^{
-        NSArray *query1 = [cart itemsWithName:@"hot pockets"];
+    describe(@"itemsWithName:", ^{
+        it(@"returns all items with a given name",^{
+            NSArray *query1 = [cart itemsWithName:@"hot pockets"];
+            
+            expect([query1 count]).to.equal(2);
+            
+            for(FISItem *item in query1) {
+                expect(item.name).to.equal(@"hot pockets");
+            }
+        });
         
-        expect([query1 count]).to.equal(2);
-        
-        for(FISItem *item in query1) {
-            expect(item.name).to.equal(@"hot pockets");
-        }
+        it(@"returns an empty array if there are no matching items in the cart",^{
+            NSArray *query2 = [cart itemsWithName:@"nilla wafers"];
+            expect(query2).to.equal(@[]);
+        });
     });
-
+    
+    describe(@"itemsMoreExpensiveThan:", ^{
+        it(@"returns all items more expensive than a given price",^{
+            NSArray *query1 = [cart itemsMoreExpensiveThan:@3];
+            
+            expect([query1 count]).to.equal(3);
+            
+            for(FISItem *item in query1) {
+                expect(item.price).to.beGreaterThan(@3);
+            }
+        });
+        
+        it(@"returns an empty array if there are no matching items in the cart",^{
+            NSArray *query2 = [cart itemsMoreExpensiveThan:@15];
+            expect(query2).to.equal(@[]);
+        });
+        
+    });
     
     
     

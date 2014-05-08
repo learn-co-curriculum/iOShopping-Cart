@@ -10,6 +10,8 @@
 
 @implementation FISItem
 
+#pragma mark - initializers
+
 -(instancetype)initWithName:(NSString *)name andPrice:(NSNumber *)price
 {
     self = [super init];

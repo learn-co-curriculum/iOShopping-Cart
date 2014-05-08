@@ -37,6 +37,11 @@
     [self.items addObject:newItem];
 }
 
+-(void)removeItem:(FISItem *)itemToRemove
+{
+    [self.items removeObject:itemToRemove];
+}
+
 -(NSNumber *)numOfItems
 {
     NSInteger itemCount = [self.items count];
@@ -68,11 +73,26 @@
     for (FISItem *item in self.items) {
         if ([item.name isEqualToString:name]) {
             [objectsWithName addObject:item];
-            NSLog(@"%@", item.name);
         }
     }
     
     return objectsWithName;
+}
+
+-(NSArray *)itemsMoreExpensiveThan:(NSNumber *)price
+{
+    NSMutableArray *relativelyExpensiveObjects = [[NSMutableArray alloc] init];
+    NSInteger paramPrice = [price integerValue];
+    
+    for (FISItem *item in self.items) {
+        NSInteger itemPrice = [item.price integerValue];
+        
+        if (itemPrice > paramPrice) {
+            [relativelyExpensiveObjects addObject:item];
+        }
+    }
+    
+    return relativelyExpensiveObjects;
 }
 
 @end

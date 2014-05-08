@@ -15,9 +15,11 @@
 
 -(NSNumber *)total;
 -(void)addItem:(FISItem *)newItem;
+-(void)removeItem:(FISItem *)itemToRemove;
 -(NSNumber *)numOfItems;
 -(NSArray *)itemsSortedByName;
 -(NSArray *)itemsSortedByPrice;
 -(NSArray *)itemsWithName:(NSString *)name;
+-(NSArray *)itemsMoreExpensiveThan:(NSNumber *)price;
 
 @end

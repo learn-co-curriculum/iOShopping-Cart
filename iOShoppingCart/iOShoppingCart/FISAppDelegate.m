@@ -35,7 +35,7 @@
     [cart addItem:item6];
     [cart addItem:item7];
     
-    [cart itemsWithName:@"protein powder"];
+    [cart itemsMoreExpensiveThan:@3];
     
     return YES;
 }
