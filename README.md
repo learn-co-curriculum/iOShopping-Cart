@@ -1,4 +1,7 @@
-# 2/12/14
+---
+  tags: oop, beginner, methods, arrays, iteration, todo
+  languages: objc
+---
 
 Making a shopping cart.
 
@@ -12,7 +15,7 @@ Making a shopping cart.
   3. `FISCart` can do a few things:
     * (NSNumber *)total
     * (NSNumber *)numOfItems
-    * (void)addItem:(FISItem *)newItems;
+    * (void)addItem:(FISItem *)newItem;
     * (void)removeItem:(FISItem *)itemToRemove;
     * (NSArray *)itemsSortedByName;
     * (NSArray *)itemsSortedByPrice;
