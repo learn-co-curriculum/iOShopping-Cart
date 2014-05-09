@@ -23,7 +23,6 @@ describe(@"FISCart", ^{
     });
     
     beforeEach(^{
-        [cart.items removeAllObjects];
         FISItem *item1 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
         FISItem *item2 = [[FISItem alloc] initWithName:@"diet coke" andPrice:@2];
         FISItem *item3 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
@@ -124,6 +123,10 @@ describe(@"FISCart", ^{
             expect(query2).to.equal(@[]);
         });
         
+    });
+    
+    afterEach(^{
+        [cart.items removeAllObjects]; 
     });
     
     
