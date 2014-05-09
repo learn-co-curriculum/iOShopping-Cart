@@ -37,8 +37,6 @@ describe(@"FISItem", ^{
         expect(item.price).to.beKindOf([NSNumber class]);
     });
     
-    
-    
 });
 
 SpecEnd
