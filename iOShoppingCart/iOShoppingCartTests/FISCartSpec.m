@@ -16,6 +16,13 @@ SpecBegin(FISCart)
 
 describe(@"FISCart", ^{
     __block FISCart *cart;
+    __block FISItem *item1 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
+    __block FISItem *item2 = [[FISItem alloc] initWithName:@"diet coke" andPrice:@2];
+    __block FISItem *item3 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
+    __block FISItem *item4 = [[FISItem alloc] initWithName:@"DiGiorno" andPrice:@5];
+    __block FISItem *item5 = [[FISItem alloc] initWithName:@"eggs" andPrice:@3];
+    __block FISItem *item6 = [[FISItem alloc] initWithName:@"milk" andPrice:@4];
+    __block FISItem *item7 = [[FISItem alloc] initWithName:@"protein powder" andPrice:@10];
     
     
     beforeAll(^{
@@ -23,13 +30,6 @@ describe(@"FISCart", ^{
     });
     
     beforeEach(^{
-        FISItem *item1 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
-        FISItem *item2 = [[FISItem alloc] initWithName:@"diet coke" andPrice:@2];
-        FISItem *item3 = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@1];
-        FISItem *item4 = [[FISItem alloc] initWithName:@"DiGiorno" andPrice:@5];
-        FISItem *item5 = [[FISItem alloc] initWithName:@"eggs" andPrice:@3];
-        FISItem *item6 = [[FISItem alloc] initWithName:@"milk" andPrice:@4];
-        FISItem *item7 = [[FISItem alloc] initWithName:@"protein powder" andPrice:@10];
         [cart addItem:item1];
         [cart addItem:item2];
         [cart addItem:item3];
@@ -75,11 +75,7 @@ describe(@"FISCart", ^{
     });
     
     it(@"can return items sorted by name",^{
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-        NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-        NSArray *sortedItems = [cart.items sortedArrayUsingDescriptors:sortDescriptors];
-        
-        expect([cart itemsSortedByName]).to.equal(sortedItems);
+        expect([cart itemsSortedByName]).to.equal(@[item2, item4, item5, item1, item3, item6, item7]);
     });
     
     it(@"can return items sorted by price",^{

@@ -29,12 +29,14 @@ describe(@"FISItem", ^{
         expect(item).to.respondTo(@selector(name));
         expect(item).to.respondTo(@selector(setName:));
         expect(item.name).to.beKindOf([NSString class]);
+        expect(item.name).to.equal(@"hot pockets");
     });
     
     it(@"has a price",^{
         expect(item).to.respondTo(@selector(price));
         expect(item).to.respondTo(@selector(setPrice:));
         expect(item.price).to.beKindOf([NSNumber class]);
+        expect(item.price).to.equal(@5);
     });
     
 });
