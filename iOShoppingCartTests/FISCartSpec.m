@@ -51,6 +51,10 @@ describe(@"FISCart", ^{
         expect(cart.items).to.beKindOf([NSMutableArray class]);
     });
     
+    it(@"it has an items NSMutableArray that has been initialized",^{
+        expect(cart.items).toNot.beNil();
+    });
+    
     it(@"can add an item to the cart",^{
         FISItem *itemToAdd = [[FISItem alloc] initWithName:@"cheez-its" andPrice:@4];
         [cart addItem:itemToAdd];
