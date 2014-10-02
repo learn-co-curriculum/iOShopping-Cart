@@ -3,16 +3,21 @@ PODS:
   - KIF (3.0.3):
     - KIF/XCTest
   - KIF/XCTest (3.0.3)
-  - Specta (0.2.1)
+  - Specta (0.2.99)
 
 DEPENDENCIES:
-  - Expecta (~> 0.2.4)
-  - KIF (~> 3.0)
-  - Specta (~> 0.2.1)
+  - Expecta
+  - KIF
+  - Specta (from `git@github.com:specta/specta.git`, branch `0.3-wip`)
+
+EXTERNAL SOURCES:
+  Specta:
+    :branch: 0.3-wip
+    :git: git@github.com:specta/specta.git
 
 SPEC CHECKSUMS:
-  Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
-  KIF: 908d9a64faa939ad96581c90f9cc256649a2014a
-  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
+  Expecta: 112bcafa2304ee0f3c5e586505f24555a47b25d5
+  KIF: f82689d2f286818a12c1e3730498163527b88faa
+  Specta: 85ea870d8886e0bbf92ed8df112823bf3eb07322
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.34.1

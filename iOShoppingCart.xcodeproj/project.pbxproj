@@ -51,8 +51,9 @@
 		725C32A2191BEA500050AE4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72F7EAC7191D2CA3000D6B27 /* FISCartSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISCartSpec.m; sourceTree = "<group>"; };
 		72F7EAC8191D2CA3000D6B27 /* FISItemSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISItemSpec.m; sourceTree = "<group>"; };
-		736F4F84EA9E4496903BFFAA /* Pods-iOShoppingCartTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOShoppingCartTests.xcconfig"; path = "Pods/Pods-iOShoppingCartTests.xcconfig"; sourceTree = "<group>"; };
+		89DAF83EF1D14C9F0D2FD05F /* Pods-iOShoppingCartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOShoppingCartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOShoppingCartTests/Pods-iOShoppingCartTests.release.xcconfig"; sourceTree = "<group>"; };
 		CFDFDDB4CF8047378A467E83 /* libPods-iOShoppingCartTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOShoppingCartTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D072E3863BEC3A6F9930C931 /* Pods-iOShoppingCartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOShoppingCartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOShoppingCartTests/Pods-iOShoppingCartTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +88,7 @@
 				725C329E191BEA500050AE4C /* iOShoppingCartTests */,
 				725C327E191BEA500050AE4C /* Frameworks */,
 				725C327D191BEA500050AE4C /* Products */,
-				736F4F84EA9E4496903BFFAA /* Pods-iOShoppingCartTests.xcconfig */,
+				BBCB7101F995030913BB4E75 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +152,15 @@
 				725C32A1191BEA500050AE4C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBCB7101F995030913BB4E75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D072E3863BEC3A6F9930C931 /* Pods-iOShoppingCartTests.debug.xcconfig */,
+				89DAF83EF1D14C9F0D2FD05F /* Pods-iOShoppingCartTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +269,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-iOShoppingCartTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOShoppingCartTests/Pods-iOShoppingCartTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6E33DCDE64D42E5AFE44EF6 /* Check Pods Manifest.lock */ = {
@@ -426,7 +436,7 @@
 		};
 		725C32AC191BEA500050AE4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 736F4F84EA9E4496903BFFAA /* Pods-iOShoppingCartTests.xcconfig */;
+			baseConfigurationReference = D072E3863BEC3A6F9930C931 /* Pods-iOShoppingCartTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOShoppingCart.app/iOShoppingCart";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -449,7 +459,7 @@
 		};
 		725C32AD191BEA500050AE4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 736F4F84EA9E4496903BFFAA /* Pods-iOShoppingCartTests.xcconfig */;
+			baseConfigurationReference = 89DAF83EF1D14C9F0D2FD05F /* Pods-iOShoppingCartTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOShoppingCart.app/iOShoppingCart";
 				FRAMEWORK_SEARCH_PATHS = (
