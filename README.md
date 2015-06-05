@@ -16,21 +16,21 @@ Making a shopping cart.
     * (NSNumber *)price
 
   3. `FISCart` can do a few things. 
-    * (NSNumber *)total
+    * `(NSNumber *)total`
       * Returns the total cost of the cart
-    * (NSNumber *)numOfItems
+    * `(NSNumber *)numOfItems`
       * returns how many items are in your cart.
-    * (void)addItem:(FISItem *)newItem;
+    * `(void)addItem:(FISItem *)newItem`
       * Adds an item to the cart array.
-    * (void)removeItem:(FISItem *)itemToRemove;
+    * `(void)removeItem:(FISItem *)itemToRemove`
       * removes the item from the cart array.
-    * (NSArray *)itemsSortedByName;
+    * `(NSArray *)itemsSortedByName`
       * returns an array of the items, sorted by name.
-    * (NSArray *)itemsSortedByPrice;
+    * `(NSArray *)itemsSortedByPrice`
       * returns an array of the items, sorted by price.
-    * (NSArray *)itemsWithName:(NSString *)name;
+    * `(NSArray *)itemsWithName:(NSString *)name`
       * returns an array of items with the name provided.
-    * (NSArray *)itemsMoreExpensiveThan:(NSNumber *)price;
+    * `(NSArray *)itemsMoreExpensiveThan:(NSNumber *)price`
       * returns an array of items more expensive then the provided price
 
   4. Make sure these all work!
