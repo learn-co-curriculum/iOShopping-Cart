@@ -1,7 +1,4 @@
----
-  tags: oop, beginner, methods, arrays, iteration, todo
-  languages: objc
----
+
 
 Making a shopping cart.
 
