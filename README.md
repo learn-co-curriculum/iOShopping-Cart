@@ -9,8 +9,6 @@
 
 ## Instructions
 
-Fork and clone this lab.
-
 Open the `iOShoppingCart.xcworkspace` file. You should see the familiar `FISAppDelegate` class and a `FISItem` class set up already.
 
 I. Create a new `FISShoppingCart` class the inherits from `NSObject`.  
