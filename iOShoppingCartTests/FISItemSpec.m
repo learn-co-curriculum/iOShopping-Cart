@@ -1,10 +1,4 @@
-//
 //  FISItemSpec.m
-//  iOShoppingCart
-//
-//  Created by Chris Gonzales on 5/8/14.
-//  Copyright 2014 FIS. All rights reserved.
-//
 
 #import "Specta.h"
 #import "FISItem.h"
@@ -14,29 +8,31 @@
 SpecBegin(FISItem)
 
 describe(@"FISItem", ^{
-    __block FISItem *item;
     
-    beforeAll(^{
-        item = [[FISItem alloc] initWithName:@"hot pockets" andPrice:@5];
+    __block FISItem *defaultItem;
+    __block FISItem *hotPockets;
+    __block FISItem *leanPockets;
+    
+    beforeEach(^{
+        defaultItem = [[FISItem alloc] init];
+        hotPockets = [[FISItem alloc] initWithName:@"Hot Pockets" priceInCents:499];
+        leanPockets = [[FISItem alloc] initWithName:@"Lean Pockets" priceInCents:549];
+    });
+
+    describe(@"default initializer", ^{
+        it(@"should set name to empty string and priceInCents to 0", ^{
+            expect(defaultItem.name).to.equal(@"");
+            expect(defaultItem.priceInCents).to.equal(0);
+        });
     });
     
-    it(@"is an FISItem", ^{
-        expect(item).notTo.beNil();
-        expect(item).to.beInstanceOf([FISItem class]);
-    });
-    
-    it(@"has a name",^{
-        expect(item).to.respondTo(@selector(name));
-        expect(item).to.respondTo(@selector(setName:));
-        expect(item.name).to.beKindOf([NSString class]);
-        expect(item.name).to.equal(@"hot pockets");
-    });
-    
-    it(@"has a price",^{
-        expect(item).to.respondTo(@selector(price));
-        expect(item).to.respondTo(@selector(setPrice:));
-        expect(item.price).to.beKindOf([NSNumber class]);
-        expect(item.price).to.equal(@5);
+    describe(@"designated initializer", ^{
+        it(@"should set name and priceInCents to submitted argument values", ^{
+            expect(hotPockets.name).to.equal(@"Hot Pockets");
+            expect(hotPockets.priceInCents).to.equal(499);
+            expect(leanPockets.name).to.equal(@"Lean Pockets");
+            expect(leanPockets.priceInCents).to.equal(549);
+        });
     });
     
 });
