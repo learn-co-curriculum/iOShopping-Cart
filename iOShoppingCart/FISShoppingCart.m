@@ -27,16 +27,14 @@
 
 - (void)sortItemsByNameAsc {
     NSSortDescriptor *sortByNameAsc = [NSSortDescriptor sortDescriptorWithKey:@"name"
-                                                                    ascending:YES
-                                                                     selector:@selector(caseInsensitiveCompare:)];
+                                                                    ascending:YES  ];
     NSArray *sortedItems = [self.items sortedArrayUsingDescriptors:@[sortByNameAsc]];
     self.items = [NSMutableArray arrayWithArray:sortedItems];
 }
 
 - (void)sortItemsByNameDesc {
     NSSortDescriptor *sortByNameDesc = [NSSortDescriptor sortDescriptorWithKey:@"name"
-                                                                     ascending:NO
-                                                                      selector:@selector(caseInsensitiveCompare:)];
+                                                                     ascending:NO   ];
     NSArray *sortedItems = [self.items sortedArrayUsingDescriptors:@[sortByNameDesc]];
     self.items = [NSMutableArray arrayWithArray:sortedItems];
 }
