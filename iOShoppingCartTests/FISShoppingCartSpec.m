@@ -28,14 +28,14 @@ describe(@"FISShoppingCart", ^{
         shoppingCart = [[FISShoppingCart alloc] init];
         shoppingCart.items = [[NSMutableArray alloc] init];
         
-        item1 = [[FISItem alloc] initWithName:@"Hot Pockets" priceInCents:499];
-        item2 = [[FISItem alloc] initWithName:@"Diet Coke, 2L" priceInCents:249];
-        item3 = [[FISItem alloc] initWithName:@"Lean Pockets" priceInCents:549];
-        item4 = [[FISItem alloc] initWithName:@"DiGiorno Pizza" priceInCents:899];
-        item5 = [[FISItem alloc] initWithName:@"Eggs, 1 dozen" priceInCents:189];
-        item6 = [[FISItem alloc] initWithName:@"Milk, 1/2 gallon" priceInCents:289];
-        item7 = [[FISItem alloc] initWithName:@"Whey Protein Powder" priceInCents:1499];
-        item8 = [[FISItem alloc] initWithName:@"Hot Pockets" priceInCents:499];
+        item1 = [[FISItem alloc] initWithName:@"hot pockets" priceInCents:499];
+        item2 = [[FISItem alloc] initWithName:@"diet coke, 2l" priceInCents:249];
+        item3 = [[FISItem alloc] initWithName:@"lean pockets" priceInCents:549];
+        item4 = [[FISItem alloc] initWithName:@"digiorno pizza" priceInCents:899];
+        item5 = [[FISItem alloc] initWithName:@"eggs, one dozen" priceInCents:189];
+        item6 = [[FISItem alloc] initWithName:@"milk, half gallon" priceInCents:289];
+        item7 = [[FISItem alloc] initWithName:@"whey protein powder" priceInCents:1499];
+        item8 = [[FISItem alloc] initWithName:@"hot pockets" priceInCents:499];
         
         items1through7 = @[item1, item2, item3, item4, item5, item6, item7];
         allItems = @[item1, item2, item3, item4, item5, item6, item7, item8];
@@ -139,17 +139,17 @@ describe(@"FISShoppingCart", ^{
     describe(@"allItemsWithName:", ^{
         it(@"should return an array containing the item whose name matches the argument string", ^{
             [shoppingCart.items addObjectsFromArray:allItems];
-            expect([shoppingCart allItemsWithName:@"Diet Coke, 2L"]).to.equal(@[item2]);
+            expect([shoppingCart allItemsWithName:@"diet coke, 2l"]).to.equal(@[item2]);
         });
         
         it(@"should return an array containing multiple items whose name matches the argument string", ^{
             [shoppingCart.items addObjectsFromArray:allItems];
-            expect([shoppingCart allItemsWithName:@"Hot Pockets"]).to.equal(@[item1, item8]);
+            expect([shoppingCart allItemsWithName:@"hot pockets"]).to.equal(@[item1, item8]);
         });
         
         it(@"should return an empty array when there are no items whose name matches the argument string", ^{
             [shoppingCart.items addObjectsFromArray:allItems];
-            expect([shoppingCart allItemsWithName:@"Kale"]).to.equal(@[]);
+            expect([shoppingCart allItemsWithName:@"kale"]).to.equal(@[]);
         });
     });
     
