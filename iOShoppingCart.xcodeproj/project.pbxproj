@@ -19,6 +19,7 @@
 		725C329A191BEA500050AE4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725C327F191BEA500050AE4C /* Foundation.framework */; };
 		725C329B191BEA500050AE4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725C3283191BEA500050AE4C /* UIKit.framework */; };
 		725C32A3191BEA500050AE4C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 725C32A1191BEA500050AE4C /* InfoPlist.strings */; };
+		7265877B19DDB04C0069AC7C /* FISShoppingCart.m in Sources */ = {isa = PBXBuildFile; fileRef = 7265877819DDB04C0069AC7C /* FISShoppingCart.m */; };
 		7265877C19DDB04C0069AC7C /* FISItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7265877A19DDB04C0069AC7C /* FISItem.m */; };
 		72F7EAC9191D2CA3000D6B27 /* FISShoppingCartSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F7EAC7191D2CA3000D6B27 /* FISShoppingCartSpec.m */; };
 		72F7EACA191D2CA3000D6B27 /* FISItemSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F7EAC8191D2CA3000D6B27 /* FISItemSpec.m */; };
@@ -50,6 +51,8 @@
 		725C3298191BEA500050AE4C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		725C32A0191BEA500050AE4C /* iOShoppingCartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOShoppingCartTests-Info.plist"; sourceTree = "<group>"; };
 		725C32A2191BEA500050AE4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7265877719DDB04C0069AC7C /* FISShoppingCart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISShoppingCart.h; sourceTree = "<group>"; };
+		7265877819DDB04C0069AC7C /* FISShoppingCart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISShoppingCart.m; sourceTree = "<group>"; };
 		7265877919DDB04C0069AC7C /* FISItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISItem.h; sourceTree = "<group>"; };
 		7265877A19DDB04C0069AC7C /* FISItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISItem.m; sourceTree = "<group>"; };
 		72F7EAC7191D2CA3000D6B27 /* FISShoppingCartSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISShoppingCartSpec.m; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 			children = (
 				725C328E191BEA500050AE4C /* FISAppDelegate.h */,
 				725C328F191BEA500050AE4C /* FISAppDelegate.m */,
+				7265877719DDB04C0069AC7C /* FISShoppingCart.h */,
+				7265877819DDB04C0069AC7C /* FISShoppingCart.m */,
 				7265877919DDB04C0069AC7C /* FISItem.h */,
 				7265877A19DDB04C0069AC7C /* FISItem.m */,
 				725C3291191BEA500050AE4C /* Images.xcassets */,
@@ -302,6 +307,7 @@
 				725C328C191BEA500050AE4C /* main.m in Sources */,
 				7265877C19DDB04C0069AC7C /* FISItem.m in Sources */,
 				725C3290191BEA500050AE4C /* FISAppDelegate.m in Sources */,
+				7265877B19DDB04C0069AC7C /* FISShoppingCart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
