@@ -62,3 +62,5 @@ II. Complete each of the method implementations so that they pass their tests:
 
 11. `allItemsWithMaximumPriceInCents:` should return an array containing only those items whose `priceInCents` property is *less than or equal to* the argument integer.
 
+
+<a href='https://learn.co/lessons/iOShopping-Cart' data-visibility='hidden'>View this lesson on Learn.co</a>
