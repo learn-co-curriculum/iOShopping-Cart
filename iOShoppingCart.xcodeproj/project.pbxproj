@@ -202,6 +202,7 @@
 				725C3294191BEA500050AE4C /* Frameworks */,
 				725C3295191BEA500050AE4C /* Resources */,
 				109F5884674342ABB940DDEC /* Copy Pods Resources */,
+				8530E3508625376676710B18 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +281,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOShoppingCartTests/Pods-iOShoppingCartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8530E3508625376676710B18 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOShoppingCartTests/Pods-iOShoppingCartTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A6E33DCDE64D42E5AFE44EF6 /* Check Pods Manifest.lock */ = {
