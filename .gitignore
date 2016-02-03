@@ -13,6 +13,7 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 DerivedData
+iOSShopping-Cart/.DS_Store
 Docs
 *.hmap
 *.ipa
@@ -27,3 +28,4 @@ Docs
 # Pods/
 
 .DS_Store
+
