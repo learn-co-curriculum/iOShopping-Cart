@@ -17,6 +17,8 @@ Docs
 *.hmap
 *.ipa
 *.xcuserstate
+iOSShopping-Cart/.DS_Store
+
 
 # CocoaPods
 #
