@@ -11,7 +11,7 @@
 
 Open the `iOShoppingCart.xcworkspace` file. You should see the familiar `FISAppDelegate` class and a `FISItem` class set up already.
 
-I. Create a new `FISShoppingCart` class the inherits from `NSObject`.  
+I. Create a new `FISShoppingCart` class that inherits from `NSObject`.  
 Import `FISItem` into `FISShoppingCart`'s header file.  
 Declare one property, an `NSMutableArray` called `items`.  
 Declare the following 11 methods in `FISShoppingCart.h`:
@@ -64,3 +64,5 @@ II. Complete each of the method implementations so that they pass their tests:
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/iOShopping-Cart' title='Shopping Cart'>Shopping Cart</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/iOShopping-Cart'>Shopping Cart</a> on Learn.co and start learning to code for free.</p>
